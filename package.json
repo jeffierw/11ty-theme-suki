@@ -1,0 +1,32 @@
+{
+  "name": "11ty-theme-suki",
+  "version": "1.0.0",
+  "description": "a minimal and beautiful 11ty theme for personal blogs.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffierw/11ty-theme-suki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffierw/11ty-theme-suki/issues"
+  },
+  "homepage": "https://github.com/jeffierw/11ty-theme-suki#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-img": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "autoprefixer": "^10.4.7",
+    "dayjs": "^1.11.3",
+    "eleventy-plugin-reading-time": "^0.0.1",
+    "postcss": "^8.4.14",
+    "postcss-load-config": "^4.0.1",
+    "tailwindcss": "^3.1.3"
+  }
+}
