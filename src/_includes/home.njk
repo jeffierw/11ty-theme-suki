@@ -1,0 +1,12 @@
+{% extends '_layout.njk' %}
+
+{% block layout %}
+    <div>
+        {% include "_header.njk" %}
+        {% include "about.njk" %}
+        <div>
+            {{ content | safe }}
+        </div>
+        {% include "_footer.njk" %}
+    </div>
+{% endblock %}  
