@@ -2,11 +2,11 @@
 
 {% block layout %}
     <div>
-        {% include "./_header.njk" %}
-        {% include "./about.njk" %}
+        {% include "_header.njk" %}
+        {% include "about.njk" %}
         <div>
             {{ content | safe }}
         </div>
-        {% include "./_footer.njk" %}
+        {% include "_footer.njk" %}
     </div>
 {% endblock %}  
