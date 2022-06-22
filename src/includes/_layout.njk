@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
     <link rel="stylesheet" href="../css/index.css">
     {% if title %}
     <title>{{  title }} | {{ config.title }}</title>
@@ -25,32 +24,29 @@
     {% endblock %}
 </body>
 <script>
-        if(!isDarkMode()) {
-            document.getElementById("moon").classList.remove('hidden')
-            document.getElementById("sun").classList.add('hidden')
-        }
-        document.getElementById("toggleDarkMode").addEventListener("click", function() {
-            if (isDarkMode()) {
-              localStorage.theme = 'light'
+        window.onload = () => {
+          if (window.CUSDIS_LOCALE) window.CUSDIS_LOCALE.powered_by = " "
+          if(!isDarkMode()) {
               document.getElementById("moon").classList.remove('hidden')
               document.getElementById("sun").classList.add('hidden')
-              window.CUSDIS && window.CUSDIS.setTheme('light')
-              document.documentElement.classList.remove('dark')
-            } else {
-              localStorage.theme = 'dark'
-              document.getElementById("sun").classList.remove('hidden')
-              document.getElementById("moon").classList.add('hidden')
+          } else {
               window.CUSDIS && window.CUSDIS.setTheme('dark')
-              document.documentElement.classList.add('dark')
-            }
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-          if (window.CUSDIS_LOCALE) window.CUSDIS_LOCALE.powered_by = " "
-        });
-        window.onload = () => {
-            if (isDarkMode()) {
+          }
+          document.getElementById("toggleDarkMode").addEventListener("click", function() {
+              if (isDarkMode()) {
+                localStorage.theme = 'light'
+                document.getElementById("moon").classList.remove('hidden')
+                document.getElementById("sun").classList.add('hidden')
+                window.CUSDIS && window.CUSDIS.setTheme('light')
+                document.documentElement.classList.remove('dark')
+              } else {
+                localStorage.theme = 'dark'
+                document.getElementById("sun").classList.remove('hidden')
+                document.getElementById("moon").classList.add('hidden')
                 window.CUSDIS && window.CUSDIS.setTheme('dark')
-            }
+                document.documentElement.classList.add('dark')
+              }
+          });
         }
 </script>
 </html>
